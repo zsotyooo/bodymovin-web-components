@@ -1,10 +1,10 @@
 {
   "name": "bodymovin-web-components",
   "version": "1.0.0",
-  "description": "A web component library for BodyMovin animations",
+  "description": "A web component library for BodyMovin (Lottie) animations",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
-  "unpkg": "dist/ionic.js",
+  "unpkg": "dist/bodymovin-web-components.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "scripts": {
