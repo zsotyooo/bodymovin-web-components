@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +9,12 @@
 <body>
   <div class="preview-box">
     <div class="preview-box__panel">
-      {{ yield }}
+      <lottie-animation
+  src="/assets/animations/sample--goal-achived.json"
+  loop="true"
+  autoplay="true">
+</lottie-animation>
+
     </div>
   </div>
   
@@ -17,6 +24,6 @@
       margin: 100px auto;
     }
   </style>
-  <script type="text/javascript" src="{{ '/build/bodymovin-web-components.js' | path }}"></script>
+  <script type="text/javascript" src="../../build/bodymovin-web-components.js"></script>
 </body>
 </html>
