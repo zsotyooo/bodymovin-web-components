@@ -1,0 +1,77 @@
+{
+  "name": "bodymovin-web-components",
+  "version": "1.0.0",
+  "description": "A web component library for BodyMovin animations",
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "unpkg": "dist/ionic.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "gulp",
+    "test": "stencil test --spec --e2e",
+    "test:e2e": "stencil test --e2e",
+    "test:spec": "stencil test --spec",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "lint": "gulp lint",
+    "lint:ts": "gulp script:lint",
+    "lint:css": "gulp styles:lint"
+  },
+  "dependencies": {
+    "lottie-web": "^5.4.4"
+  },
+  "devDependencies": {
+    "@frctl/fractal": "^1.1.7",
+    "@frctl/nunjucks": "^1.0.3",
+    "@stencil/core": "~0.16.2",
+    "@stencil/postcss": "^0.1.0",
+    "@types/autoprefixer": "^9.4.0",
+    "@types/jest": "23.3.14",
+    "@types/puppeteer": "1.12.1",
+    "autoprefixer": "^9.4.10",
+    "gulp": "^4.0.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-stylelint": "^8.0.0",
+    "gulp-tslint": "^8.1.4",
+    "husky": "^1.3.1",
+    "jest": "23.6.0",
+    "jest-cli": "23.6.0",
+    "puppeteer": "1.8.0",
+    "stylelint": "^9.3.0",
+    "stylelint-config-rational-order": "0.0.2",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-no-browser-hacks": "^1.2.1",
+    "tslint": "^5.13.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-ionic-rules": "0.0.21",
+    "tslint-language-service": "^0.9.9",
+    "tslint-react": "^3.6.0",
+    "tslint-stencil": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsotyooo/bodymovin-web-components.git"
+  },
+  "keywords": [
+    "bodymovin",
+    "lottie",
+    "animation",
+    "web-component",
+    "custom-element",
+    "stencil",
+    "adobe",
+    "aftereffects"
+  ],
+  "author": "Zsolt Molnar <zsotyooo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zsotyooo/bodymovin-web-components/issues"
+  },
+  "homepage": "https://github.com/zsotyooo/bodymovin-web-components#readme",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "hooks": {
+    "pre-commit": "NODE_ENV=production npm test && NODE_ENV=production npm run lint"
+  }
+}

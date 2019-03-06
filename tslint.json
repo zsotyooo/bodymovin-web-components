@@ -1,0 +1,25 @@
+// tslint 5.13.0
+// tslint-react 3.6.0
+{
+  "extends": ["tslint-ionic-rules"],
+  "rulesDirectory": [
+    "node_modules/tslint-react/rules"
+  ],
+  "rules": {
+    // tslint-react
+    "jsx-alignment": true,
+    "jsx-ban-props": false,
+    "jsx-boolean-value": true,
+    "jsx-curly-spacing": [
+      true,
+      "never"
+    ],
+    "jsx-no-bind": true,
+    "jsx-no-lambda": true,
+    "jsx-no-multiline-js": false,
+    "jsx-no-string-ref": true,
+    "jsx-use-translation-function": false,
+    "jsx-self-close": true,
+    "jsx-wrap-multiline": true
+  }
+}

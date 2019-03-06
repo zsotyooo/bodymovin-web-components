@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Preview Layout</title>
+</head>
+<body>
+  {{ yield }}
+  
+  <script type="text/javascript" src="{{ '/bodymovin-web-components.js' | path }}"></script>
+</body>
+</html>

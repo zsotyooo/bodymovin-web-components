@@ -1,0 +1,5 @@
+<lottie-animation
+  src="{{ src }}"
+  loop="{{ loop }}"
+  autoplay="{{ autoplay }}">
+</lottie-animation>
