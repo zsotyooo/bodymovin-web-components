@@ -7,6 +7,6 @@
 <body>
   {{ yield }}
   
-  <script type="text/javascript" src="{{ '/bodymovin-web-components.js' | path }}"></script>
+  <script type="text/javascript" src="{{ '/build/bodymovin-web-components.js' | path }}"></script>
 </body>
 </html>

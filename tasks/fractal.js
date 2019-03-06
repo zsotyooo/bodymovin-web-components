@@ -110,5 +110,5 @@ build.description = 'Build fractal files.';
 
 module.exports = {
   start,
-  build
+  build,
 }
