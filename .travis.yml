@@ -4,6 +4,7 @@ node_js:
 env:
   - NODE_ENV=production
 before_script:
+  - npm install -g gulp
   - npm install -g gulp-cli
   - npm install
 script: npm run lint && npm run test
