@@ -21,7 +21,7 @@ tasks.forEach(taskGroup => {
 
 const build = series(
   stencil.build,
-  fractal.build
+  fractal.build,
 );
 build.displayName = 'build';
 build.description = 'Compile all assets.';

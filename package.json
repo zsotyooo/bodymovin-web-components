@@ -8,7 +8,9 @@
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "scripts": {
-    "build": "stencil build --docs",
+    "build": "gulp build",
+    "build:stencil": "stencil build --docs",
+    "build:fractal": "gulp fractal:build",
     "start": "gulp",
     "test": "stencil test --spec --e2e",
     "test:e2e": "stencil test --e2e",
