@@ -12,7 +12,7 @@ You can download lottie animations from [LottieFiles](https://lottiefiles.com/).
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/bodymovin-web-components@1.0.3/dist/bodymovin-web-components.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/bodymovin-web-components@1.0.5/dist/bodymovin-web-components.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
