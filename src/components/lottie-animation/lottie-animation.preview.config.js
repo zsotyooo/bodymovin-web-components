@@ -16,7 +16,7 @@ module.exports = {
   preview: "@preview.50view",
   name: "lottie animation",
   context: {
-    src: "/assets/animations/sample--goal-achived.json",
+    src: "../../assets/animations/sample--goal-achived.json",
     loop: "false",
     autoplay: "true",
   },
