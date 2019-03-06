@@ -1,3 +1,15 @@
+{% if autoplay == 'false' %}
+<script type="text/javascript">
+  var playAnimation = function () {
+    document.querySelector('lottie-animation').play();
+  }
+</script>
+
+<hr/>
+<button onclick="playAnimation()">play</button>
+<hr/>
+{% endif %}
+
 <lottie-animation
   src="{{ src }}"
   loop="{{ loop }}"

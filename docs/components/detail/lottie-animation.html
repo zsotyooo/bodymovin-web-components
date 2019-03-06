@@ -162,7 +162,19 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-f323307e515b7e34e72d2aca89d51f2b-panel-view">
     <code class="Code Code--lang-text">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">lottie-animation</span>
+        <pre><span class="xml"></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> autoplay == 'false' %}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">var</span> playAnimation = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'lottie-animation'</span>).play();
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"playAnimation()"</span>&gt;</span>play<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>/&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml">
+
+<span class="hljs-tag">&lt;<span class="hljs-name">lottie-animation</span>
   <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ src }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
   <span class="hljs-attr">loop</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ loop }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
   <span class="hljs-attr">autoplay</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ autoplay }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
