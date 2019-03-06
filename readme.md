@@ -5,13 +5,13 @@
 
 This is a collection of Web Components to add animations to your website using AfterEffect's [BodyMovin](https://aescripts.com/bodymovin/) plugin. Under the hood it uses Airbnb's [Lottie](http://airbnb.io/lottie/) javascript library. You can download lottie animations from [LottieFiles](https://lottiefiles.com/).
 
-## [Check out the component documentation and Styleguide](https://github.com/zsotyooo/bodymovin-web-components).
+## [Check out the component documentation and Styleguide](https://zsotyooo.github.io/bodymovin-web-components/).
 
 ## Installation and Usage
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/bodymovin-web-components@1.0.6/dist/bodymovin-web-components.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/bodymovin-web-components@1.0.7/dist/bodymovin-web-components.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
@@ -24,7 +24,7 @@ This is a collection of Web Components to add animations to your website using A
 - Add an import to the npm packages `import 'bodymovin-web-components';`
 - Then you can use the element anywhere in your template, JSX, html etc
 
-### [Read the documentation for the available Web Components](https://github.com/zsotyooo/bodymovin-web-components).
+### [Read the documentation for the available Web Components](https://zsotyooo.github.io/bodymovin-web-components/).
 
 ## Built using Stencil
 
