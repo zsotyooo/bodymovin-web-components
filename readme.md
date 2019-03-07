@@ -106,6 +106,9 @@ Every component needs to have a fractal preview in the styleguide as well.
 - [Zsolt Molnar](https://www.linkedin.com/in/zsotyooo)
 
 ## Read more
+- [Lottie](https://airbnb.design/lottie/)
+- [LottieFiles](https://lottiefiles.com/)
+- [BodyMovin AE plugin](https://aescripts.com/bodymovin/)
 - [Stencil](https://stenciljs.com/)
 - [Fractal](https://fractal.build/)
 - [Jest](https://jestjs.io/)
