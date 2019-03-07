@@ -1,0 +1,5 @@
+<lottie-scroll
+  src="{{ src }}"
+  speed="{{ speed }}"
+  playthrough="{{ playthrough }}">
+</lottie-scroll>
