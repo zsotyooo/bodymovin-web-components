@@ -1,4 +1,4 @@
-import { propHelper } from './prop';
+import { propHelper } from './prop-helper';
 
 describe('strToBool', () => {
   it('returns boolean for boolean', () => {

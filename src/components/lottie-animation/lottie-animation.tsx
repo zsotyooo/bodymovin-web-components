@@ -111,6 +111,14 @@ export class LottieAnimationComponent {
     return this.lottieAnimation.totalFrames;
   }
 
+  /**
+   * gets the framerate
+   */
+  @Method()
+  async getFrameRate(): Promise<number> {
+    return this.lottieAnimation.frameRate;
+  }
+
   updateSrc(src: string): void {
     if (src) {
       this.lottieAnimation = this.lottieAnimationLoader.load(

@@ -2,6 +2,8 @@ declare namespace Lottie {
   export interface AnimationItem {
     totalFrames: number;
 
+    frameRate: number;
+
     animationProgress: number;
 
     play();
@@ -29,7 +31,7 @@ declare namespace Lottie {
     playSegments(segments: number[] | number[][], forceFlag: boolean);
 
     // event listener
-    addEventListener(eventType: string, listener: () => void);
+    addEventListener(eventType: string, listener: (e?: any) => void);
 
     // To destroy and release resources.
     destroy();
