@@ -4,4 +4,4 @@ node_js:
 before_script:
   - npm install -g gulp
   - npm install -g gulp-cli
-script: npm run lint
+script: npm run lint && npm run test
