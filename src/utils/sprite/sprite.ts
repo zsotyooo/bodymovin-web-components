@@ -23,7 +23,7 @@ export class Sprite {
     const segments = [];
     for (let i = 1; i <= times; i++) {
       segments.push(this.segments[segmentName].getInterval());
-      if (bounce ) {
+      if (bounce) {
         segments.push(this.segments[segmentName].getReverseInterval());
       }
     }
