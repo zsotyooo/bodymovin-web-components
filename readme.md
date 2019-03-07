@@ -5,13 +5,34 @@
 
 This is a collection of Web Components to add animations to your website using AfterEffect's [BodyMovin](https://aescripts.com/bodymovin/) plugin. Under the hood it uses Airbnb's [Lottie](http://airbnb.io/lottie/) javascript library. You can download lottie animations from [LottieFiles](https://lottiefiles.com/).
 
-## [Check out the component documentation and Styleguide](https://zsotyooo.github.io/bodymovin-web-components/).
+## Components
+
+Check out the [Documentation and Styleguide](https://zsotyooo.github.io/bodymovin-web-components/) for more info and to see them in action.
+
+### Lottie animation
+
+Insert a lottie animation just by specifying a source location, and a couple of options. Control you animations through the rich [public interface](https://zsotyooo.github.io/bodymovin-web-components/docs/components/lottie-animation/readme).
+
+
+```html
+<lottie-animation src="[PATH/TO/DATA/JSON]" loop="false" autoplay="true" />
+```
+
+### Lottie scroll animation
+
+Insert a lottie animation and let it play when it comes to the viewport. Use the 2 available modes to play through the animation or seek into it as the scroll position changes.
+Read more [here](https://zsotyooo.github.io/bodymovin-web-components/docs/components/lottie-scroll/readme).
+
+
+```html
+<lottie-scroll src="[PATH/TO/DATA/JSON]" playthrough="false" speed="1" />
+```
 
 ## Installation and Usage
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/bodymovin-web-components@1.0.7/dist/bodymovin-web-components.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/bodymovin-web-components@1.1.0/dist/bodymovin-web-components.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
@@ -24,7 +45,8 @@ This is a collection of Web Components to add animations to your website using A
 - Add an import to the npm packages `import 'bodymovin-web-components';`
 - Then you can use the element anywhere in your template, JSX, html etc
 
-### [Read the documentation for the available Web Components](https://zsotyooo.github.io/bodymovin-web-components/).
+### Other framework integrations
+- Read about it [in the Stencil docs](https://stenciljs.com/docs/overview).
 
 ## Built using Stencil
 

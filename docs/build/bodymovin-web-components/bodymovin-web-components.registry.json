@@ -2,12 +2,18 @@
   "namespace": "BodymovinWebComponents",
   "fsNamespace": "bodymovin-web-components",
   "loader": "../bodymovin-web-components.js",
-  "core": "bodymovin-web-components.nilitffo.js",
-  "corePolyfilled": "bodymovin-web-components.q8y3rj2u.js",
+  "core": "bodymovin-web-components.cpbq4jtu.js",
+  "corePolyfilled": "bodymovin-web-components.zd6qqmxv.js",
   "components": {
     "lottie-animation": {
       "bundleIds": {
-        "$": "3ljbnbuf"
+        "$": "ycyv4942"
+      },
+      "encapsulation": "shadow"
+    },
+    "lottie-scroll": {
+      "bundleIds": {
+        "$": "ycyv4942"
       },
       "encapsulation": "shadow"
     }
