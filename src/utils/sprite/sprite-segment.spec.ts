@@ -1,4 +1,4 @@
-import { SpriteSegment } from '.';
+import { SpriteSegment } from './sprite-segment';
 
 describe('SpriteSegment', () => {
   let spriteSegment;

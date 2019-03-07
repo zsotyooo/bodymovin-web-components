@@ -1,5 +1,7 @@
 import { Component, Event, EventEmitter, Method, Prop, Watch } from '@stencil/core';
-import { AnimationLoadedEventData, LottieAnimationLoader, LottieConfigCreator } from '../..';
+import { AnimationLoadedEventData } from '../../utils/animation/animation-inteface';
+import { LottieAnimationLoader } from '../../utils/lottie/lottie-animation-loader';
+import { LottieConfigCreator } from '../../utils/lottie/lottie-config-creator';
 
 @Component({
   styleUrl: 'lottie-animation.css',

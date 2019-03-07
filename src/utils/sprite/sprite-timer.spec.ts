@@ -1,4 +1,4 @@
-import { SpriteTimer } from '.';
+import { SpriteTimer } from './sprite-timer';
 
 describe('SpriteTimer', () => {
   it('creates', () => {

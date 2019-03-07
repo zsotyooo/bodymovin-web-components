@@ -1,6 +1,6 @@
 /* tslint:disable:no-import-side-effect */
 import { Component, Element, Event, EventEmitter, Listen, Prop } from '@stencil/core';
-import { AnimationLoadedEventData } from '../..';
+import { AnimationLoadedEventData } from '../../utils/animation/animation-inteface';
 
 import ScrollMagic from 'scrollmagic';
 

@@ -1,4 +1,4 @@
-import { AnimationConfigCreator } from '../animation';
+import { AnimationConfigCreator } from '../animation/animation-inteface';
 
 export class LottieConfigCreator implements AnimationConfigCreator<Lottie.AnimationConfig> {
   createWithSrc(container: HTMLDivElement, src: string, autoplay: boolean, loop: boolean): Lottie.AnimationConfig {

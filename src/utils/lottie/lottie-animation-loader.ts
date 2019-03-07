@@ -1,5 +1,5 @@
 /* tslint:disable:no-import-side-effect */
-import { AnimationLoadedEventData, AnimationLoader } from '../..';
+import { AnimationLoadedEventData, AnimationLoader } from '../animation/animation-inteface';
 
 import '../../lib/lottie/lottie.min';
 

@@ -1,4 +1,4 @@
-import { Sprite } from '.';
+import { Sprite } from './sprite';
 
 describe('Sprite', () => {
   let sprite;

@@ -1,4 +1,4 @@
-import { SpriteSegment } from '.';
+import { SpriteSegment } from './sprite-segment';
 
 export class Sprite {
   segments: { [index: string]: SpriteSegment} = {};
@@ -31,6 +31,6 @@ export class Sprite {
   }
 
   constructor(
-    public frameRate: number
+    public frameRate: number,
   ) {}
 }
