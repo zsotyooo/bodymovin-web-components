@@ -1,5 +1,9 @@
 declare namespace Lottie {
   export interface AnimationItem {
+    totalFrames: number;
+
+    animationProgress: number;
+
     play();
 
     stop();

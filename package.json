@@ -17,11 +17,12 @@
     "test:spec": "stencil test --spec",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "lint": "gulp lint",
-    "lint:ts": "gulp script:lint",
+    "lint:ts": "gulp scripts:lint",
     "lint:css": "gulp styles:lint"
   },
   "dependencies": {
-    "lottie-web": "^5.4.4"
+    "lottie-web": "^5.4.4",
+    "scrollmagic": "^2.0.6"
   },
   "devDependencies": {
     "@frctl/fractal": "^1.1.7",
@@ -29,6 +30,7 @@
     "@stencil/core": "~0.16.2",
     "@stencil/postcss": "^0.1.0",
     "@types/autoprefixer": "^9.4.0",
+    "@types/gsap": "^1.20.2",
     "@types/jest": "23.3.14",
     "@types/puppeteer": "1.12.1",
     "autoprefixer": "^9.4.10",

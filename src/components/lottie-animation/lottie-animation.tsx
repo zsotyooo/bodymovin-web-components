@@ -12,24 +12,40 @@ export class LottieAnimationComponent {
   lottieAnimationLoader: LottieAnimationLoader;
   lottieConfigCreator: LottieConfigCreator;
 
-  @Prop() autoplay: string | boolean = false;
+  /**
+   * start animation automatically
+   */
+  @Prop() autoplay = false;
 
-  @Prop() dataJson: object | string | false = false;
+  /**
+   * data JSON
+   */
+  @Prop() dataJson = {};
 
   @Watch('dataJson')
   onDataJsonChange(value) {
     this.updateDataJson(value);
   }
 
-  @Prop() loop: string | boolean = false;
+  /**
+   * loop animation
+   */
+  @Prop() loop = false;
 
-  @Prop() src: string | false = false;
+  /**
+   * data JSON location
+   */
+  @Prop() src = '';
 
   @Watch('src')
   onSrcChange(value) {
     this.updateSrc(value);
   }
 
+  /**
+   * triggered when the animation is loaded
+   * (event.detail.animation contains the Lottie animation item).
+   */
   @Event() onAnimationLoaded: EventEmitter;
 
   componentDidLoad() {
@@ -39,12 +55,63 @@ export class LottieAnimationComponent {
     this.updateSrc(this.src);
   }
 
+  /**
+   * plays the animation
+   */
   @Method()
   play(): void {
     this.lottieAnimation.play();
   }
 
-  updateSrc(src: string | false): void {
+  /**
+   * stops the animation
+   */
+  @Method()
+  stop(): void {
+    this.lottieAnimation.stop();
+  }
+
+  /**
+   * sets the animation progress to a certain point (0..1)
+   */
+  @Method()
+  progress(progress: number): void {
+    this.lottieAnimation.animationProgress = progress;
+  }
+
+  /**
+   * sets the speed of the animation
+   */
+  @Method()
+  setSpeed(speed: number): void {
+    this.lottieAnimation.setSpeed(speed);
+  }
+
+  /**
+   * sets the direction of the animation
+   */
+  @Method()
+  setDirection(direction: number): void {
+    this.lottieAnimation.setDirection(direction);
+  }
+
+  /**
+   * plays the animation until a certain frame, or time
+   */
+  @Method()
+  goToAndStop(value: number, isFrame = true): void {
+    this.lottieAnimation.goToAndStop(value, isFrame);
+  }
+
+  /**
+   * gets the number of frames
+   */
+  @Method()
+  async getTotalFrames(): Promise<number> {
+    return this.lottieAnimation.totalFrames;
+  }
+
+  updateSrc(src: string): void {
     if (src) {
       this.lottieAnimation = this.lottieAnimationLoader.load(
         this.lottieConfigCreator.createWithSrc(
@@ -58,8 +125,8 @@ export class LottieAnimationComponent {
     }
   }
 
-  updateDataJson(dataJson: string | object | false): void {
-    if (dataJson) {
+  updateDataJson(dataJson: object): void {
+    if (Object.keys(dataJson).length > 0) {
       this.lottieAnimation = this.lottieAnimationLoader.load(
         this.lottieConfigCreator.createWithData(
           this.animationContainerElement,

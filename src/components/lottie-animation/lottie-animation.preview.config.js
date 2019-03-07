@@ -3,7 +3,7 @@ const variants = [];
 ["false", "true"].forEach((autoplay) => {
   ["false", "true"].forEach((loop) => {
     variants.push({
-      name: `lottie animation${autoplay === 'true' ? ' autoplay' : ''}${loop === 'true' ? ' loop' : ''}`,
+      name: `${autoplay === 'true' ? '' : 'no '}autoplay ${loop === 'true' ? '' : 'no '}loop`,
       context: {
         autoplay,
         loop
@@ -15,6 +15,7 @@ const variants = [];
 module.exports = {
   preview: "@preview.50view",
   name: "lottie animation",
+  title: "lottie animation",
   context: {
     src: "../../assets/animations/sample--goal-achived.json",
     loop: "false",
