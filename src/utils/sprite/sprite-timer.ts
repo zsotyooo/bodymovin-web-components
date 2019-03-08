@@ -1,10 +1,10 @@
-import { frameHelper } from '../helpers/frame-helper';
+import { frameHelper } from '../common/frame-helper';
 
 
 export interface SpriteTimerOptions {
   segments: [number, number][];
   frameRate?: number;
-  input?: 'sec' | 'pro' | 'frame';
+  unit?: 'sec' | 'pro' | 'frame';
   onComplete?: () => void;
   onCancel?: () => void;
 }
@@ -20,7 +20,7 @@ export class SpriteTimer {
     return new SpriteTimer(
       opts.segments,
       (typeof opts.frameRate) !== 'undefined' ? opts.frameRate : 60,
-      (typeof opts.input) !== 'undefined' ? opts.input : 'pro',
+      (typeof opts.unit) !== 'undefined' ? opts.unit : 'pro',
       (typeof opts.onComplete) !== 'undefined' ? opts.onComplete : noop,
       (typeof opts.onCancel) !== 'undefined' ? opts.onCancel : noop,
     );
@@ -50,13 +50,13 @@ export class SpriteTimer {
   }
 
   private convertToMs(nmb: number): number {
-    return frameHelper.convertToMs(nmb, this.input, this.frameRate);
+    return frameHelper.convertToMs(nmb, this.unit, this.frameRate);
   }
 
   constructor(
     public segments: [number, number][],
     public frameRate = 60,
-    public input: 'sec' | 'pro' | 'frame' = 'pro',
+    public unit: 'sec' | 'pro' | 'frame' = 'pro',
     public onComplete = noop,
     public onCancel = noop,
   ) {}

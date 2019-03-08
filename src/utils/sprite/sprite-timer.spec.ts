@@ -9,7 +9,7 @@ describe('SpriteTimer', () => {
   it('calculates time properly in seconds', () => {
     const timer = SpriteTimer.create({
       segments: [[10, 20], [20, 10]],
-      input: 'sec',
+      unit: 'sec',
     });
     expect(timer.getTime()).toEqual(20 * 1000);
   });
@@ -17,7 +17,7 @@ describe('SpriteTimer', () => {
   it('calculates time properly in pro frames', () => {
     const timer = SpriteTimer.create({
       segments: [[10.30, 20], [20, 10]],
-      input: 'pro',
+      unit: 'pro',
       frameRate: 60,
     });
     expect(timer.getTime()).toEqual(19.5 * 1000);
@@ -26,7 +26,7 @@ describe('SpriteTimer', () => {
   it('calculates time properly in frames', () => {
     const timer = SpriteTimer.create({
       segments: [[10, 20], [20, 10]],
-      input: 'frame',
+      unit: 'frame',
       frameRate: 100,
     });
     expect(timer.getTime()).toEqual(20 / 100 * 1000);
@@ -37,7 +37,7 @@ describe('SpriteTimer', () => {
 
     const timer = SpriteTimer.create({
       segments: [[1, 1.1]],
-      input: 'sec',
+      unit: 'sec',
       onComplete,
     });
     await timer.start();
@@ -51,7 +51,7 @@ describe('SpriteTimer', () => {
 
     const timer = SpriteTimer.create({
       segments: [[1, 2]],
-      input: 'sec',
+      unit: 'sec',
       onComplete,
       onCancel,
     });
