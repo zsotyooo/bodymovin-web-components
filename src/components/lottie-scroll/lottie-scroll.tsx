@@ -1,6 +1,6 @@
 /* tslint:disable:no-import-side-effect */
 import { Component, Element, Event, EventEmitter, Listen, Prop } from '@stencil/core';
-import { AnimationLoadedEventData } from '../../utils/animation/animation-inteface';
+import { LottieLoadedEventData } from '../..';
 
 import ScrollMagic from 'scrollmagic';
 
@@ -48,7 +48,7 @@ export class LottieScrollComponent {
   lottieAnimationComponent: HTMLLottieAnimationElement;
 
   @Listen('onAnimationLoaded')
-  async onAnimationLoaded(event: CustomEvent<AnimationLoadedEventData<Lottie.AnimationItem>>): Promise<void> {
+  async onAnimationLoaded(event: CustomEvent<LottieLoadedEventData>): Promise<void> {
     if (event.detail.animation) {
       await this.addAnimation();
     }

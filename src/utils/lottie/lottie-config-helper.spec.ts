@@ -1,17 +1,15 @@
-import { LottieConfigCreator } from './lottie-config-creator';
+import { lottieConfigHelper } from './lottie-config-helper';
 
-describe('LottieConfigCreator', () => {
-  let configCreator: LottieConfigCreator;
+describe('LottieConfigHelper', () => {
   let container: HTMLDivElement;
 
   beforeAll(() => {
-    configCreator = new LottieConfigCreator();
     document.body.innerHTML = '<div id="container"></div>';
     container = document.getElementById('container') as HTMLDivElement;
   });
 
   it('creates config with src', () => {
-    const config = configCreator.createWithSrc(
+    const config = lottieConfigHelper.createWithSrc(
       container,
       'http://url.to/the-data.json',
       true,
@@ -28,7 +26,7 @@ describe('LottieConfigCreator', () => {
   });
 
   it('creates config with data', () => {
-    const config = configCreator.createWithData(
+    const config = lottieConfigHelper.createWithData(
       container,
       { a: 1 },
       true,

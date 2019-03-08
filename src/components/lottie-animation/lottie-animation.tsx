@@ -1,7 +1,5 @@
 import { Component, Event, EventEmitter, Method, Prop, Watch } from '@stencil/core';
-import { AnimationLoadedEventData } from '../../utils/animation/animation-inteface';
-import { LottieAnimationLoader } from '../../utils/lottie/lottie-animation-loader';
-import { LottieConfigCreator } from '../../utils/lottie/lottie-config-creator';
+import { LottieLoadedEventData, LottieLoader, lottieConfigHelper } from '../..';
 
 @Component({
   styleUrl: 'lottie-animation.css',
@@ -11,8 +9,7 @@ import { LottieConfigCreator } from '../../utils/lottie/lottie-config-creator';
 export class LottieAnimationComponent {
   animationContainerElement: HTMLDivElement;
   lottieAnimation: Lottie.AnimationItem;
-  lottieAnimationLoader: LottieAnimationLoader;
-  lottieConfigCreator: LottieConfigCreator;
+  lottieLoader: LottieLoader;
 
   /**
    * start animation automatically
@@ -51,8 +48,7 @@ export class LottieAnimationComponent {
   @Event() onAnimationLoaded: EventEmitter;
 
   componentDidLoad() {
-    this.lottieAnimationLoader = new LottieAnimationLoader();
-    this.lottieConfigCreator = new LottieConfigCreator();
+    this.lottieLoader = new LottieLoader();
     this.updateDataJson(this.dataJson);
     this.updateSrc(this.src);
   }
@@ -123,8 +119,8 @@ export class LottieAnimationComponent {
 
   updateSrc(src: string): void {
     if (src) {
-      this.lottieAnimation = this.lottieAnimationLoader.load(
-        this.lottieConfigCreator.createWithSrc(
+      this.lottieAnimation = this.lottieLoader.load(
+        lottieConfigHelper.createWithSrc(
           this.animationContainerElement,
           src,
           this.autoplay,
@@ -137,8 +133,8 @@ export class LottieAnimationComponent {
 
   updateDataJson(dataJson: object): void {
     if (Object.keys(dataJson).length > 0) {
-      this.lottieAnimation = this.lottieAnimationLoader.load(
-        this.lottieConfigCreator.createWithData(
+      this.lottieAnimation = this.lottieLoader.load(
+        lottieConfigHelper.createWithData(
           this.animationContainerElement,
           dataJson,
           this.autoplay,
@@ -149,7 +145,7 @@ export class LottieAnimationComponent {
     }
   }
 
-  emitOnAnimationLoadedEvent(data: AnimationLoadedEventData<Lottie.AnimationItem>) {
+  emitOnAnimationLoadedEvent(data: LottieLoadedEventData) {
     this.onAnimationLoaded.emit(data);
   }
 

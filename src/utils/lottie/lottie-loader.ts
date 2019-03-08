@@ -1,15 +1,17 @@
 /* tslint:disable:no-import-side-effect */
-import { AnimationLoadedEventData, AnimationLoader } from '../animation/animation-inteface';
-
 import '../../lib/lottie/lottie.min';
 
 declare var lottie: LottiePlayer;
 
-export class LottieAnimationLoader implements AnimationLoader<Lottie.AnimationConfig, Lottie.AnimationItem> {
+export interface LottieLoadedEventData {
+  animation: Lottie.AnimationItem;
+}
+
+export class LottieLoader {
   lottie: LottiePlayer = lottie;
   animation: Lottie.AnimationItem;
 
-  load(config: Lottie.AnimationConfig, callback: (d: AnimationLoadedEventData<Lottie.AnimationItem>) => void) {
+  load(config: Lottie.AnimationConfig, callback: (d: LottieLoadedEventData) => void) {
     this.animation = this.lottie.loadAnimation(config);
     this.animation.addEventListener('DOMLoaded', () => {
       callback({ animation: this.animation });
