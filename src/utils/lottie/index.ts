@@ -1,2 +1,3 @@
-export * from './lottie-loader';
+export * from './lottie-load-helper';
 export * from './lottie-config-helper';
+export * from './lottie-helpers';

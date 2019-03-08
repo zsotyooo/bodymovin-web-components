@@ -29,5 +29,3 @@ export class LottieConfigHelper {
     };
   }
 }
-
-export const lottieConfigHelper = new LottieConfigHelper();

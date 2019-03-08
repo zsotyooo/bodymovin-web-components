@@ -1,5 +1,5 @@
 import { Component, Event, EventEmitter, Method, Prop, Watch } from '@stencil/core';
-import { LottieLoadedEventData, LottieLoader, lottieConfigHelper } from '../..';
+import { LottieLoadedEventData, lottieConfigHelper, lottieLoader } from '../..';
 
 @Component({
   styleUrl: 'lottie-animation.css',
@@ -9,7 +9,6 @@ import { LottieLoadedEventData, LottieLoader, lottieConfigHelper } from '../..';
 export class LottieAnimationComponent {
   animationContainerElement: HTMLDivElement;
   lottieAnimation: Lottie.AnimationItem;
-  lottieLoader: LottieLoader;
 
   /**
    * start animation automatically
@@ -48,7 +47,6 @@ export class LottieAnimationComponent {
   @Event() onAnimationLoaded: EventEmitter;
 
   componentDidLoad() {
-    this.lottieLoader = new LottieLoader();
     this.updateDataJson(this.dataJson);
     this.updateSrc(this.src);
   }
@@ -119,7 +117,7 @@ export class LottieAnimationComponent {
 
   updateSrc(src: string): void {
     if (src) {
-      this.lottieAnimation = this.lottieLoader.load(
+      this.lottieAnimation = lottieLoader.load(
         lottieConfigHelper.createWithSrc(
           this.animationContainerElement,
           src,
@@ -133,7 +131,7 @@ export class LottieAnimationComponent {
 
   updateDataJson(dataJson: object): void {
     if (Object.keys(dataJson).length > 0) {
-      this.lottieAnimation = this.lottieLoader.load(
+      this.lottieAnimation = lottieLoader.load(
         lottieConfigHelper.createWithData(
           this.animationContainerElement,
           dataJson,

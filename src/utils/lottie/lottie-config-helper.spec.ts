@@ -1,4 +1,6 @@
-import { lottieConfigHelper } from './lottie-config-helper';
+import { LottieConfigHelper } from './lottie-config-helper';
+
+const lottieConfigHelper = new LottieConfigHelper();
 
 describe('LottieConfigHelper', () => {
   let container: HTMLDivElement;
