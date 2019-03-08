@@ -6,6 +6,8 @@
     "node_modules/tslint-react/rules"
   ],
   "rules": {
+    // enabled for tests
+    "no-shadowed-variable": false,
     // tslint-react
     "jsx-alignment": true,
     "jsx-ban-props": false,
