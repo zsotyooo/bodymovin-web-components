@@ -1,7 +1,4 @@
-/* tslint:disable:no-import-side-effect */
-import '../../lib/lottie/lottie.min';
-
-declare var lottie: LottiePlayer;
+import lottie from 'lottie-web';
 
 export interface LottieLoadedEventData {
   animation: Lottie.AnimationItem;
